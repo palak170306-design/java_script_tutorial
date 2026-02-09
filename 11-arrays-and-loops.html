@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and Loops</title>
+</head>
+<body>
+    <script>
+        /*
+        const myArray = [10,20,30];
+        console.log(myArray);
+
+        console.log(myArray[1]);
+        myArray[0]= 99;
+        console.log(myArray);
+
+        [1,'hello', true, {name: 'socks'},[1,2]]
+
+        console.log(typeof [1,2]);
+        console.log(Array.isArray([1,2]));
+
+        console.log(myArray.length);
+
+        myArray.push(100);
+        console.log(myArray);
+
+        myArray.splice(1,2);
+        console.log(myArray);
+        */
+       //-------------
+
+        let i=1;
+
+        while(i<=5){
+            console.log(i);
+            i+=1;
+        }
+
+        for(let i=1; i<=5; i++){
+            console.log(i*i);
+        }
+
+        let randomNumber =0;
+        while(randomNumber<0.5){
+            randomNumber= Math.random();
+        }
+
+        console.log(randomNumber);
+
+        const todoList=[
+            'make dinner',
+            'wash doshes',
+            'watch youtube'
+        ];
+
+        for(let index=0; index<=todoList.length-1; index++){
+            const value = todoList[index];
+            console.log(value);
+            console.log(index);
+        }
+
+        const nums=[1,1,2];
+        let total=0;
+
+        for(let i=0; i<nums.length; i++){
+            const num = nums[i];
+            total= total + num;
+        }
+        console.log(total);
+
+        const numDoubled =[];
+        for(let i=0; i<nums.length; i++){
+            const num = nums[i];
+            numDoubled.push(num*2);
+            console.log(numDoubled);
+        }
+
+        // ------------
+
+        const array1=[1,2,3,4];
+        const array2= array1;
+        array2.push(5);
+        console.log(array1);
+        console.log(array2); // both will  have sam eoutput that is [1,2,3,4,5] beacause array is a reference 
+        // so toavoid thisuse slice
+        const array3=array1.slice();
+        array1.puch(5);
+        console.log(array1);
+        console.log(array3);// they will have diff output
+
+        //------------------deconstructing
+        const firsValue=array3[0];
+        const secondValue=array3[1];
+        // now other method to do this is
+        const [firstValue,secondvalue]=[1,2,3,4];
+        //----------------
+        for(let i=1;i<=10;i++){
+            console.log(i);
+            if(i==8){
+                break; // come out of the loop exit it and continue skip one iteration
+            }
+        }
+    </script>
+</body>
+</html>

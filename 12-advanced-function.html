@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced functions</title>
+</head>
+<body>
+    <script>
+        /*
+        function greet(){
+            console.log('hello');
+        }
+        greet();
+
+        const num= 2;
+        const fun1= function() {
+            console.log('hello2');
+        };
+        console.log(fun1);
+        console.log(typeof fun1);
+        fun1();
+
+        const object1={
+            num:2,                            //function inside object
+            fun:function() {
+                console.log('hello3');
+            }
+        };
+        object1.fun();
+
+        function display(param){
+            console.log(param);
+        }
+        display(3);
+
+        function run(param){   //function inside function
+            param();
+        }
+        run(function(){
+            console.log('hello4');
+        });
+        */
+
+        setTimeout(function(){
+            console.log('timeout');
+        }, 3000);
+
+        //asynchronous code
+
+        console.log('next line'); // here code does not waoit for the time command it set timer and then go on next command..
+
+        //set interval --built in function
+
+        setInterval(function(){
+            console.log('interval');
+        },3000);
+
+        console.log('next line 2');
+
+        // another way to loop through an array and preferred method
+        ['make dinner',
+            'wash dishes',
+            'watch youtube'
+        ].forEach(function(value ,index){
+            console.log(value);
+            console.log(index);
+        });
+
+
+        </script>
+</body>
+</html>
